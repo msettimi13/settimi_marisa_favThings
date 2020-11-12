@@ -27,5 +27,5 @@
             $result[] = $row;
         } // this grabs the data and shows it
 
-        echo (json_encode($result));
+        echo(json_encode($result));
     }

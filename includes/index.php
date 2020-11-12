@@ -6,9 +6,9 @@
 
     // else get all the pieces
 
-    if (isset($_GET['id'])) {
+    if (isset($_GET["id"])) {
         //get one item from the database - whichever one you clicked on and asking for in the UI
-        $targetID = $_GET['id'];
+        $targetID = $_GET["id"];
         $result = getSingleUser($pdo, $targetID);
 
         return $result;
