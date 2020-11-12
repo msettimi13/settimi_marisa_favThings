@@ -1,0 +1,54 @@
+// main rules go here
+
+// font families 
+@font-face {
+    font-family: 'Julius Sans One';
+    src: url('../fonts/juliussansone-regular.ttf');
+    src: url('../fonts/juliussansone-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand-light.ttf');
+    src: url('../fonts/quicksand-light.ttf') format('truetype');
+}
+
+body {
+    background-color: $yellow;
+    margin: 0; 
+    border: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+// ft section
+
+#ftSection {
+
+}
+
+.favouriteThings {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    .ft_title {
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .ft_img {
+        width: 30%;
+        margin: 45px;
+
+    }
+
+    .ft_desc {
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
