@@ -15,23 +15,25 @@ import { fetchData, postData } from "./modules/DataMiner.js";
         let lightbox = document.querySelector(".lightbox");
         }
     
-    function retrieveProjectInfo() {
-        debugger;
-        console.log(this);
+    function retrieveProjectInfo(event) {
+        //debugger;
+        //console.log(this);
         //test for an ID
         //check for an id, and if there isnt one, dont try the fetch call
         // bc itll break (the php will choke)
-        if (!this.id) { return }
+        //if (!this.id) { return }
+        
 
-        fetchData(`./includes/index.php?id=${this.id}`).then(data => console.log(data)).catch(err => { console.log(err); popErrorBox(err); });
+        //fetchData(`./includes/index.php?id=${this.id}`).then(data => console.log(data)).catch(err => { console.log(err); popErrorBox(err); });
 
         //function retrieveProjectInfo() {
-          //  if (!event.target.id) { return }
+            if (!event.target.id) { return }
     
-          //  fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => { console.log(err); popErrorBox(err); });
+            fetchData(`./includes/index.php?id=${event.target.id}`).then(data => console.log(data)).catch(err => { console.log(err); popErrorBox(err); });
         }
 
-    function displayData(thumbs) {
+
+    function renderPortfolioThumbnails(thumbs) {
         let userSection = document.querySelector('.ftSection'),
             userTemplate = document.querySelector('#ftTemplate').content;
 
@@ -48,5 +50,5 @@ import { fetchData, postData } from "./modules/DataMiner.js";
         userSection.addEventListener("click", retrieveProjectInfo);
     }
     
-    fetchData("./includes/index.php").then(data => displayData(data)).catch(err => { console.log(err); popErrorBox(err); });
+    fetchData("./includes/index.php").then(data => renderPortfolioThumbnails(data)).catch(err => { console.log(err); popErrorBox(err); });
 })();
