@@ -17,7 +17,7 @@ import { fetchData, postData } from "./modules/DataMiner.js";
     
     function retrieveProjectInfo(event) {
         //debugger;
-        //console.log(this);
+        console.log(event.target.id);
         //test for an ID
         //check for an id, and if there isnt one, dont try the fetch call
         // bc itll break (the php will choke)
@@ -34,6 +34,7 @@ import { fetchData, postData } from "./modules/DataMiner.js";
 
 
     function renderPortfolioThumbnails(thumbs) {
+        //debugger;
         let userSection = document.querySelector('.ftSection'),
             userTemplate = document.querySelector('#ftTemplate').content;
 
@@ -42,7 +43,7 @@ import { fetchData, postData } from "./modules/DataMiner.js";
                 currentUserText = currentUser.querySelector('.favouriteThings').children;
 
             currentUserText[1].src = `images/${thumbs[user].image}`;
-            currentUserText[2].id = thumbs[user].id;
+            currentUserText[1].id = thumbs[user].id;
             // add this new user to the view
             userSection.appendChild(currentUser);
         }
