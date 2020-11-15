@@ -1,0 +1,38 @@
+﻿Favourite Things Roadmap
+
+
+Favourite Things: Friends, Family, Travel
+Columns: ID, Title, Image, Description
+
+
+Set up Folders
+* Create github repo
+* Setup folder structure
+
+
+Create Database
+* Login to php myadmin
+* Create a database
+* Create a table for family, friends, and travel that contains:
+   * ID
+   * Title
+   * Image
+   * Description
+* Link database
+
+
+Build Page
+* Add HTML
+* Add css within sass modules
+   * Add favourite colours (pink, purple)
+* Upload fonts
+
+
+JS Script
+* Add:
+   * Retrieve Data function
+   * Displaying Data function
+      * Title
+      * Image
+      * Description
+   * Error handling
