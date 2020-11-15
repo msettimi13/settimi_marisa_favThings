@@ -1,16 +1,12 @@
 #mainHeader {
     text-align:center;
-    margin:0;
-    padding:-10px;
-    height:300px;
-    color: $main-text-color;
+    height: 10%;
+    width: 100%;
+    color: white;
     font-family:$main-font;
-    font-size:50px;
+    font-size: 5vw;
+    padding-bottom: 6vh;
+    padding-top: 2vh;
     letter-spacing:5px;
     background-color: $pink;
-    margin-top: 20px;
-}
-
-h1 {
-    padding-top: 85px;
 }

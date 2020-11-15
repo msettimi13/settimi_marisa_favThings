@@ -6,7 +6,7 @@ import { fetchData, postData } from "./modules/DataMiner.js";
     console.log('loaded');
     
     function popErrorBox(message) {
-        alert("Something has gone horribly, horribly wrong");
+        alert("Something has gone wrong, refresh the page");
     }
 
     function handleDataSet(data) {
@@ -44,6 +44,8 @@ import { fetchData, postData } from "./modules/DataMiner.js";
 
             currentUserText[1].src = `images/${thumbs[user].image}`;
             currentUserText[1].id = thumbs[user].id;
+            currentUserText[0].textContent = thumbs[user].title;
+            currentUserText[2].textContent = thumbs[user].description;
             // add this new user to the view
             userSection.appendChild(currentUser);
         }
